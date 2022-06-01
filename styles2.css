@@ -1,0 +1,246 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+.logo {
+  width: 100px;
+}
+
+ul {
+  color: #252429;
+  list-style-type: none;
+  margin-top: -30px;
+  text-align: justify;
+}
+
+li {
+  display: block;
+  font-size: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  text-align: center;
+  font-size: 20px;
+  color: #e5e6ea;
+  margin-top: 10px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 20px;
+  color: #252429;
+}
+
+p {
+  text-align: left;
+  font-size: 15px;
+  color: #252429;
+}
+
+.family,
+.dog {
+  padding-top: 10px;
+  width: 293px;
+  height: auto;
+}
+
+label {
+  color: #252429;
+  font-size: 15px;
+}
+
+input,
+button,
+textarea {
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.video {
+  text-align: center;
+}
+
+.iframe {
+  width: 300px;
+  height: 450px;
+}
+
+.parent {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 190px 50px 1fr 40px;
+  grid-template-areas:
+    "nav"
+    "header"
+    "main"
+    "footer";
+}
+
+nav,
+header,
+main,
+footer {
+  padding: 5px;
+  font-size: 20px;
+}
+
+nav {
+  background-color: #e5e6ea;
+  grid-area: nav;
+}
+
+header {
+  color: #e5e6ea;
+  background-color: #1c6080;
+  grid-area: header;
+}
+
+main {
+  background-color: #c9e8fd;
+  grid-area: main;
+}
+
+footer {
+  background: url("images/sneeuw2.jpg") #e5e6ea;
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-area: footer;
+}
+
+footer p {
+  color: #252429;
+  text-align: center;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .parent {
+    grid-template-columns: 180px 1fr;
+    grid-template-rows: 60px 1fr 40px;
+    grid-template-areas:
+      "nav header"
+      "nav main"
+      "nav footer";
+  }
+
+  .logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  li {
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .bio {
+    display: grid;
+    grid-template-columns: 205px 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "family about"
+      "dog about";
+  }
+
+  .family {
+    width: 200px;
+    grid-area: family;
+  }
+
+  .about {
+    grid-area: about;
+    padding: 10px;
+  }
+
+  .dog {
+    width: 200px;
+    grid-area: dog;
+  }
+
+  br {
+    display: none;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 50px 150px 320px;
+    grid-gap: 15px;
+  }
+
+  label {
+    font-size: 15px;
+    grid-column: 2 / 3;
+  }
+
+  input,
+  button {
+    grid-column: 3 / 4;
+    height: 30px;
+  }
+
+  .iframe {
+    width: 600px;
+    height: 450px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .parent {
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 60px 1fr 40px;
+    grid-template-areas:
+      "nav nav"
+      "header header"
+      "main main"
+      "footer footer";
+  }
+
+  .logo {
+    display: inline;
+    margin-left: 0;
+  }
+
+  ul {
+    margin-top: 20px;
+    padding: auto;
+    float: right;
+    display: inline;
+  }
+  li {
+    display: inline;
+    margin: 40px 20px;
+    padding: 40px 20px;
+  }
+
+  .bio {
+    grid-template-columns: 305px 1fr 305px;
+    grid-template-rows: 1fr;
+    grid-template-areas: "family about dog";
+  }
+
+  .family {
+    width: 300px;
+  }
+
+  .dog {
+    width: 300px;
+  }
+
+  form {
+    grid-template-columns: 300px 150px 320px;
+    grid-gap: 30px;
+  }
+}

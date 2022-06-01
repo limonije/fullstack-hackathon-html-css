@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <title>Contact</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="styles2.css" />
+  </head>
+
+  <body>
+    <div class="parent">
+      <nav>
+        <img class="logo" src="images/logo grijs kleurcode.png" />
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="tauernlodge.html">Tauernlodge</a></li>
+          <li><a href="locatie.html">Locatie</a></li>
+          <li><a href="over.html">Over ons</a></li>
+        </ul>
+      </nav>
+      <header class="header-image">
+        <h1>Contact</h1>
+      </header>
+      <main>
+        <h2>Aanvragen Beschikbaarheid</h2>
+        <form name="holiday" method="POST" data-netlify="true">
+          <label for="firstName" class="first-name">Voornaam</label>
+          <input id="firstName" type="text" />
+          <br />
+          <label for="lastName" class="last-name">Achternaam</label>
+          <input id="lastName" type="text" />
+          <br />
+          <label for="email" class="e-mail">E-mail</label>
+          <input id="email" type="email" />
+          <br />
+          <label for="mobile" class="mobile-phone">Mobiel</label>
+          <input id="mobile" type="tel" placeholder="06 12 34 56 78" />
+          <br />
+          <label for="checkIn" class="check-in">Datum Check-in </label>
+          <input id="checkIn" type="date" />
+          <br />
+          <label for="checkOut" class="check-in">Datum Check-out </label>
+          <input id="checkOut" type="date" />
+          <br />
+          <label for="adults" class="adults-amount">Aantal volwassenen</label>
+          <input id="adults" type="number" min="1" max="8" />
+          <br />
+          <label for="children" class="child-amount"
+            >Aantal kinderen <br />0-12
+          </label>
+          <input id="children" type="number" min="0" max="7" />
+          <br />
+          <label for="towels" class="towel-service"
+            >Handdoeken pakket
+            <input type="radio" name="towels" value="yes" /> ja
+            <input type="radio" name="towels" value="no" /> nee
+          </label>
+          <br />
+          <label for="childCare" class="child-care"
+            >Kinderbedje/stoel
+            <input type="radio" name="childcare" value="yes" /> ja
+            <input type="radio" name="childcare" value="no" /> nee
+          </label>
+          <br />
+          <label for="SpecialRequest" class="special-request"
+            >Speciale verzoeken</label>
+          <textarea rows="5" cols="30" name="SpecialRequest"></textarea>
+          <br />
+          <button type="submit">Verstuur</button>
+          <input type="reset" value="Reset" />
+        </form>
+      </main>
+      <footer><p>&#169 2022 Tauernlodge haus 2.<br /> Alle rechten voorbehouden.</p></footer>
+    </div>
+  </body>
+</html>

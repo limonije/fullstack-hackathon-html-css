@@ -1,0 +1,228 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+}
+
+.header-foto {
+  width: 100%;
+}
+
+ul {
+  color: #252429;
+  list-style-type: none;
+  margin-top: 0;
+  text-align: justify;
+}
+
+li {
+  display: inline;
+  font-size: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  text-align: center;
+  font-size: 15px;
+  color: #252429;
+}
+
+p {
+  text-align: left;
+  font-size: 15px;
+  color: #252429;
+  padding: 5px 30px;
+}
+
+.parent {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 110px 1fr 1400px 1fr 40px;
+  grid-template-areas:
+    "nav"
+    "header"
+    "main"
+    "widget"
+    "footer";
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  margin: -30px;
+}
+
+.ski-foto,
+.sauna,
+.living {
+  width: 30%;
+}
+
+.childroom {
+  width: 45%;
+}
+
+.balcony {
+  width: 46%;
+}
+
+.summer {
+  width: 295px;
+  height: 357px;
+  margin-top: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.winter {
+  width: 295px;
+  margin-top: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav,
+header,
+main,
+footer {
+  padding: 5px;
+  font-size: 20px;
+}
+
+nav {
+  background-color: #e5e6ea;
+  grid-area: nav;
+}
+
+header {
+  color: #e5e6ea;
+  background-color: #1c6080;
+  grid-area: header;
+}
+
+main {
+  background-color: #c9e8fd;
+  grid-area: main;
+}
+
+.widget-area {
+  background-color: #c9e8fd;
+  grid-area: widget;
+}
+
+footer {
+  background: url("images/sneeuw2.jpg") #e5e6ea;
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-area: footer;
+}
+
+footer p {
+  color: #252429;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .parent {
+    grid-template-columns: 1fr 200px;
+    grid-template-rows: 110px 1fr 750px 40px;
+    grid-template-areas:
+      "nav nav"
+      "header header"
+      "main widget"
+      "footer footer";
+  }
+
+  li {
+    margin: 40px 20px;
+    padding: 40px 20px;
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .facilities {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "ski-foto sauna living child balcony";
+  }
+  
+  .ski-foto {
+    margin-left: 30px;
+  }
+
+  .ski-foto,
+  .sauna,
+  .living,
+  .childroom,
+  .balcony {
+    width: 18%;
+  }
+
+  .summer {
+    width: 190px;
+    height: auto;
+  }
+
+  .winter {
+    width: 190px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .parent {
+    grid-template-columns: 1fr 300px;
+    grid-template-rows: 110px 1fr 570px 40px;
+    grid-template-areas:
+      "nav nav"
+      "header widget"
+      "main main"
+      "footer footer";
+  }
+
+  ul {
+    padding: auto;
+    float: right;
+    display: inline;
+  }
+
+  .ski-foto {
+    margin-left: 50px;
+  }
+
+  .summer {
+    width: 295px;
+    height: 362px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .winter {
+    width: 295px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .widget-area {
+    background-color: #1c6080;
+  }
+}
